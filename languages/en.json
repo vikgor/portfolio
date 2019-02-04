@@ -1,0 +1,7 @@
+{
+	"theme-data":
+	{
+		"name": "Portfolio",
+		"description": "Simple and minimalitic, great for a portfolio. Uses cover images as thumbnails. If a cover image isn't set - random pastel color is used for a thumbnail."
+	}
+}
