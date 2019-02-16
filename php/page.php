@@ -5,13 +5,23 @@
 
 	<div>
         <!-- Title -->
-		<a href="<?php echo $page->permalink(); ?>">
-            <h1><?php echo $page->title(); ?></h1>
-		</a>
+        <article class="hentry">
+            <header>
+                <h1><?php echo $page->title(); ?></h1>
+            </header>
+            <div>
+                <p><?php
+            if ($page->category()) {
+                echo $L->get('Category').': <a href="'.DOMAIN_CATEGORIES.$page->categoryKey().'">'.$page->category().'</a> ';
+            };
+            ?></p>
+            </div>
+        </article>
+        
         
         <!-- Cover image -->   
         <?php if ($page->coverImage()): ?>
-        <img class="alignleft" src="<?php echo $page->coverImage(); ?>">
+        <img class="alignright" src="<?php echo $page->coverImage(); ?>">
         <?php endif ?>
         
 		<!-- Full content -->
