@@ -16,11 +16,13 @@
     
 <!-- Blog Posts -->
 <?php
-    if ($WHERE_AM_I == 'page') {
+    if ($WHERE_AM_I == 'home') {
+        include(THEME_DIR_PHP.'home.php');
+    } else if ($WHERE_AM_I == 'page') {
         include(THEME_DIR_PHP.'page.php');
     } else {
-        include(THEME_DIR_PHP.'home.php');
-    }
+        include(THEME_DIR_PHP.'category.php');
+    }    
     ?>
 </div>
     
