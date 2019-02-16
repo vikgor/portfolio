@@ -23,7 +23,7 @@
                 <?php // random pastel color if no cover image
                 $background_colors = array('#b4dbb5', '#93c9d8', '#e7abe2', '#fbbc88', '#eaeeac', '#ff9292','#f2ee97', '#afe5ad', '#83b8f4', '#ecb3d2', '#a4b6dd', '#d09292', '#c094cc', '#a2d0c0', '#c37892');
                 $rand_background = $background_colors[array_rand($background_colors)];?>
-                <a class="project-thumbnail" href="<?php echo $page->permalink(); ?>" style="background-color:<?php echo $rand_background; ?>;">
+                <a class="project-thumbnail" href="<?php echo $page->permalink(); ?>" <?php if (!$page->coverImage()):?>style="background-color:<?php echo $rand_background; ?>;"<?php endif ?>>
                     <?php if ($page->coverImage()): ?>
                     <img width="480" height="480" alt="<?php echo $page->title(); ?>" src="<?php echo $page->coverImage(); ?>" sizes="(max-width: 480px) 100vw, 480px">
                     <?php endif ?>
@@ -33,7 +33,7 @@
                         <a href="<?php echo $page->permalink(); ?>"><?php echo $page->title(); ?></a>
                     </h2>
                     <div class="project-categories">
-                        <a href="https://design.maker.themepatio.com/project-category/illustrations/" rel="tag"><?php echo $page->description(); ?></a>
+                        <a><?php echo $page->description(); ?></a>
                     </div>
                 </header>
             </article>
