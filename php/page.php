@@ -9,7 +9,7 @@
             <header>
                 <h1><?php echo $page->title(); ?></h1>
             </header>
-            <div>
+            <div><!-- Shows the page category. Delete the <div> if not needed -->
                 <p><?php
             if ($page->category()) {
                 echo $L->get('Category').': <a href="'.DOMAIN_CATEGORIES.$page->categoryKey().'">'.$page->category().'</a> ';
